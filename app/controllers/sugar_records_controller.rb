@@ -1,0 +1,2 @@
+class SugarRecordsController < ApplicationController
+end
