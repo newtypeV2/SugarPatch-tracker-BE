@@ -1,5 +1,10 @@
 class SugarRecordsController < ApplicationController
 
+    def index
+        records = SugarRecord.where(user_id: params["userId"])
+        render json: records
+    end
+
     def create
         new_record = SugarRecord.create(value: params['value'], user_id: params['user_id'], date: DateTime.now())
         new_record.comment = Comment.create(text: params['comment'], sugar_record_id: new_record.id, date: DateTime.now())

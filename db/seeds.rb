@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 gian = User.create(username: 'gian', password: 'password')
+claire = User.create(username: 'claire', password: 'password')
 
 record1 = SugarRecord.find_or_create_by(value: 90.5, user_id: gian.id, date: DateTime.now()-2)
 record2 = SugarRecord.find_or_create_by(value: 75.10, user_id: gian.id, date: DateTime.now()-1)
