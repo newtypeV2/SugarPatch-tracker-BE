@@ -11,4 +11,10 @@ class SugarRecordsController < ApplicationController
         render json: test_rec
     end
 
+    def update
+        target_record = SugarRecord.find(params["id"])
+        target_record.update(value: params["value"])
+        render json: target_record
+    end
+
 end

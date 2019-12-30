@@ -24,10 +24,10 @@ class SessionsController < ApplicationController
             :only => [:id, :username],
             :include => {
                 :sugar_records => {
-                    :only => [:id,:value, :date],
+                    :only => [:id, :value, :date],
                     :include => {
                         :comment => {
-                            :only => [:text]
+                            :only => [:id, :text]
                         }
                     }
                     
