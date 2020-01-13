@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: sugar_patch_tracker_BE_development
+  username: sugar_patch_tracker_BE
+  password: password
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,9 +59,8 @@ test:
   <<: *default
   database: sugar_patch_tracker_BE_test
 
-  # username: sugar_patch_tracker_BE
-
-  # password: password
+  username: sugar_patch_tracker_BE
+  password: password
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
